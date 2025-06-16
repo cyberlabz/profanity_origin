@@ -8,13 +8,13 @@
 #include <vector>
 #include <map>
 #include <set>
-
+#pragma comment(lib, "OpenCL.lib")
 #if defined(__APPLE__) || defined(__MACOSX)
 #include <OpenCL/cl.h>
 #include <OpenCL/cl_ext.h> // Included to get topology to get an actual unique identifier per device
 #else
-#include <CL/cl.h>
-#include <CL/cl_ext.h> // Included to get topology to get an actual unique identifier per device
+#include <d:\BitBrut\profanity\CL\cl.h>
+#include <d:\BitBrut\profanity\CL\cl_ext.h> // Included to get topology to get an actual unique identifier per device
 #endif
 
 #define CL_DEVICE_PCI_BUS_ID_NV  0x4008
@@ -141,8 +141,6 @@ std::string getDeviceCacheFilename(cl_device_id & d, const size_t & inverseSize)
 }
 
 int main(int argc, char * * argv) {
-	THIS LINE WILL LEAD TO A COMPILE ERROR. THIS TOOL SHOULD NOT BE USED, SEE README.
-
 	try {
 		ArgParser argp(argc, argv);
 		bool bHelp = false;
